@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+Названиепроекта: Тестовое Задание (ТЗ) для проверки релевантных работодателю знаний и опыта.
+Основная цель задания - продемонстрировать опыт и знания разработчика проекта.
+Исходя из требований ТЗ реализовано следующее:
+1. Выполннена верстка компонентов на базе скринов-примеров (всего 4 скрин-примера).
+2. Приложение включает две отдельные страницы.
+3. На каждой странице есть:
+    - верхнее поле (header), которое формируется с помощью компонента TopMenu;
+    - ниже расположены два поля (колонки), а именно:
+    - слева панель навигации, которая формируется с помощью компонента Navigation Menu;
+    - справа либо поле с информацией о приходах (формируется с помощью компонента Orders_1.js), либо поле с информацией о товарах (формируется с помощью компонента Products.js).
+3. Для реализации требований ТЗ создано 10 компонентов, а именно:
+    - index.js;
+    - App.js;
+    - NavigationMenu.js;
+    - Orders_1.js;
+    - Products.js;
+    - TopMenu.js;
+    - Clock.js;
+    - Modal.js;
+    - Modal_delene.js;
+    - Data_app.js,
+    а также файл стилизации страниц проекта App.css.
+4. В компоненте Navigation Menu находятся роут-ссылки на Orders_1 и Products.
+5. В компоненте TopMenu в правом верхнем углу в реальном времени выводятся дата и время.
+6. В компоненте Orders_1 построчно выводится информация о приходах. 
+В каждой строке есть следующие поля:
+    - название прихода;
+    - кнопка активации модального окна с информацией о продуктах, содержащихся в данном приходе;
+    - поле с информацией о количестве продуктов в данном приходе;
+    - поле с информацией о дате прихода в двух форматах;
+    - поле с информацией об общей стоимсти товаров в данном приходе в двух валютах: USD и UAN;
+    - поле с кнопкой активации модального окна удаления данного прихода.
+    В верхнем поле выводится информация о названии прихода и суммарном количестве приходов.
+7. В компоненте Products построчно выводится информация о всех продуктах
+    В каждой строке есть следующие поля:
+    - название продукта;
+    - тип продукта;
+    - даты гарантии в разных форматах;
+    - цена продукта в разных валютах (USD и UAN);
+    - название прихода;
+    - кнопка активации модального окна удаления данного прихода.
+    В верхнем поле выводится информация о названии компонента, суммарном количестве продуктов, а также форма фильтрации продуктов по их типу в виде выпадающего списка с названием типов имеющихся продуктов.
+8. Компонент Modal.js выводит информацию о названиях и стоимости продуктов в данном приходе в виде модального окна. При необходимости детализации информации о конкретном продукте можно кликнуть по его названию и справа будет выведена расширенная информация о данном продукте.
+9. Компонент Modal_delete.js выводит информацию о названиях и стоимости продуктов в данном приходе в виде модального окна с возможностью детализации информации о каждом продукте. В нижнем поле модального окна есть кнопки удаления данного прихода и отмены удаления.
+10. Компонент Clock.js обеспечивает вывод текущего времени в компоненте TopMenu в формате hh:mm.
+11. Компонент Data_app.js представляет собой базу данных, размещенных на  Front-end.
+12. Компонент App.js формирует поля страниц проекта, а также фактически является маршрутизатором страниц приходов и продуктов.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
